@@ -1,0 +1,585 @@
+/* =========================================
+   SYIKIN & HAFIDZ
+   DEEP OLIVE + CHAMPAGNE GOLD
+   ELEGANT LUXURY WEDDING
+========================================= */
+
+:root {
+  --olive: #45483D;
+  --olive-dark: #34382F;
+  --champagne: #E8D9B8;
+  --gold: #B99D65;
+  --muted-gold: #C9B995;
+  --white: #FFFFFF;
+  --text: #45483D;
+  --light: #F8F6F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--light);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* =========================================
+   OPENING COVER
+========================================= */
+
+.cover {
+  min-height: 100svh;
+  background: var(--olive);
+  color: var(--champagne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::before,
+.cover::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(232, 217, 184, 0.25);
+  transform: rotate(45deg);
+}
+
+.cover::before {
+  top: -150px;
+  left: -120px;
+}
+
+.cover::after {
+  bottom: -150px;
+  right: -120px;
+}
+
+.cover-content {
+  width: 100%;
+  max-width: 650px;
+  padding: 55px 25px;
+  border: 1px solid rgba(232, 217, 184, 0.45);
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.cover .eyebrow {
+  color: var(--muted-gold);
+}
+
+.ornament {
+  color: var(--gold);
+  letter-spacing: 5px;
+  margin: 25px 0;
+  font-size: 14px;
+}
+
+.together {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.cover h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(55px, 10vw, 88px);
+  font-weight: 400;
+  line-height: 0.95;
+  margin: 20px 0;
+}
+
+.cover h1 span {
+  display: block;
+  font-size: 35px;
+  color: var(--gold);
+  margin: 12px 0;
+  font-style: italic;
+}
+
+.gold-line {
+  width: 75px;
+  height: 1px;
+  background: var(--gold);
+  margin: 30px auto;
+}
+
+.cover-date {
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.cover-location {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.open-button {
+  margin-top: 35px;
+  padding: 14px 35px;
+  border: 1px solid var(--gold);
+  background: var(--champagne);
+  color: var(--olive-dark);
+  letter-spacing: 2px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.open-button:hover {
+  background: transparent;
+  color: var(--champagne);
+}
+
+.cover-footer {
+  font-size: 8px;
+  letter-spacing: 2px;
+  margin-top: 45px;
+  color: var(--muted-gold);
+}
+
+/* =========================================
+   MAIN INVITATION
+========================================= */
+
+.hidden {
+  display: none !important;
+}
+
+.invitation {
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  padding: 95px 22px;
+  text-align: center;
+}
+
+.section .eyebrow {
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 6vw, 55px);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.section p {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.introduction {
+  background: var(--white);
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.introduction > p:not(.eyebrow) {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.introduction h3,
+.closing-section h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--gold);
+  margin-top: 30px;
+}
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown-section {
+  background: var(--olive);
+  color: var(--champagne);
+}
+
+.countdown-section .eyebrow {
+  color: var(--muted-gold);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.countdown div {
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.countdown span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted-gold);
+}
+
+/* =========================================
+   WEDDING DETAILS
+========================================= */
+
+.details-section {
+  background: var(--light);
+}
+
+.detail-content {
+  max-width: 550px;
+  margin: 45px auto 0;
+  padding: 40px 20px;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+
+.detail-label {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 25px;
+}
+
+.detail-content h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* =========================================
+   FAMILY CONTACTS
+========================================= */
+
+.family-section {
+  background: var(--white);
+}
+
+.family-grid {
+  max-width: 750px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.family-card {
+  padding: 30px 20px;
+  border: 1px solid var(--champagne);
+}
+
+.family-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.family-card p {
+  font-size: 13px;
+}
+
+/* =========================================
+   ITINERARY
+========================================= */
+
+.itinerary-section {
+  background: var(--light);
+}
+
+.timeline {
+  max-width: 500px;
+  margin: 40px auto 0;
+  border-left: 1px solid var(--gold);
+  text-align: left;
+  padding-left: 30px;
+}
+
+.timeline p {
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.timeline strong {
+  display: inline-block;
+  min-width: 110px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-section {
+  background: var(--white);
+}
+
+.gallery-grid {
+  max-width: 900px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery-placeholder {
+  min-height: 220px;
+  background: var(--champagne);
+  color: var(--olive);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+/* =========================================
+   RSVP
+========================================= */
+
+.rsvp-section {
+  background: var(--olive);
+  color: var(--champagne);
+}
+
+.rsvp-section .eyebrow {
+  color: var(--muted-gold);
+}
+
+.primary-button {
+  padding: 14px 35px;
+  background: var(--champagne);
+  border: 1px solid var(--gold);
+  color: var(--olive-dark);
+  letter-spacing: 2px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 30px;
+}
+
+.primary-button:hover {
+  background: transparent;
+  color: var(--champagne);
+}
+
+/* =========================================
+   GUESTBOOK
+========================================= */
+
+.guestbook-section {
+  background: var(--white);
+}
+
+#liveGuestbook {
+  margin-top: 30px;
+}
+
+/* =========================================
+   CLOSING
+========================================= */
+
+.closing-section {
+  background: var(--olive-dark);
+  color: var(--champagne);
+}
+
+.closing-section h2 {
+  font-style: italic;
+}
+
+.closing-section p {
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+/* =========================================
+   RSVP MODAL
+========================================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(25, 28, 23, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 450px;
+  background: var(--light);
+  padding: 40px 30px;
+  position: relative;
+  margin: auto;
+}
+
+.modal-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.modal-content .eyebrow {
+  text-align: center;
+  color: var(--gold);
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  border: none;
+  background: none;
+  color: var(--olive);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-content label {
+  display: block;
+  font-size: 12px;
+  margin: 15px 0 5px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--champagne);
+  background: var(--white);
+  color: var(--olive);
+  outline: none;
+}
+
+.modal-content form .primary-button {
+  width: 100%;
+}
+
+#formStatus {
+  font-size: 12px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+
+  .cover-content {
+    padding: 45px 18px;
+  }
+
+  .cover h1 {
+    font-size: 62px;
+  }
+
+  .section {
+    padding: 75px 20px;
+  }
+
+  .family-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-placeholder {
+    min-height: 170px;
+  }
+
+  .countdown {
+    gap: 18px;
+  }
+
+  .countdown div {
+    min-width: 65px;
+  }
+
+  .countdown strong {
+    font-size: 38px;
+  }
+
+  .timeline {
+    padding-left: 18px;
+  }
+
+  .timeline strong {
+    min-width: 95px;
+  }
+}
